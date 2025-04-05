@@ -1,0 +1,179 @@
+:root {
+    --primary: #220A38;
+    --secondary: #D1A662;
+    --light: #f6f7f6;
+    --dark: #1a1a1a;
+  }
+  
+  body {
+    background-color: var(--primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-container {
+    background-color: var(--light);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1000px;
+    color: var(--dark);
+  }
+  
+  .head_bar {
+    background-color: var(--light);
+    color: var(--dark);
+    height: 70px;
+    padding: 10px;
+    margin: 0;
+    align-content: center;
+  }
+
+  .spacer-line{
+    border-bottom: #5a5b9f 2px solid;
+    width: 100%;
+}
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary); 
+    text-decoration: none;
+  }
+  
+  .section-title {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: var(--primary);
+  }
+  
+  .form-control {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.25rem rgba(209, 166, 98, 0.25);
+  }
+  
+  .payment-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .payment-option:hover {
+    background-color: rgba(209, 166, 98, 0.1);
+  }
+  
+  .payment-option input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .pix-qr-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--secondary);
+  }
+  
+  .price {
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  .total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  @media (max-width: 768px) {
+    .main-container {
+      margin: 15px;
+      padding: 20px;
+    }
+  }
+
+        /* Buy Button Styles */
+        .buy-button-container {
+            margin-top: 30px;
+            text-align: center;
+          }
+          
+          .btn-buy {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+          }
+          
+          .btn-buy:hover {
+            background-color: var(--light);
+            color: var(--primary);
+            border-color: var(--secondary);
+          }
+          
+          @media (max-width: 768px) {
+            .main-container {
+              margin: 15px;
+              padding: 20px;
+            }
+            
+            .btn-buy {
+              max-width: 100%;
+            }
+          }

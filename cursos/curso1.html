@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facilitando Acupuntura</title>
+   
+    <link rel="icon" type="image/x-icon" href="../resources/images/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resources/css/curso.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    
+<div class="head_bar">
+    <div class = "container">
+        <div class="row">
+            <div class="col-2 d-flex align-items-center">
+                <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                <h5 class="mb-0">Facilitando Acupuntura</h5></div>
+            <div class="col-6"></div>
+            <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
+            <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
+            <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
+            <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+        </div>
+    </div>
+    <div class="spacer" style="height: 10px;"></div>
+    <div class="spacer-line"></div>
+    <div class="spacer" style="height:10px;"></div>
+</div>
+
+
+<div class="purple-bg">
+    <div class="spacer" style="height: 20px;"></div>
+  
+    <div class="hybrid-container">
+      <!-- Top Row: Image + Text -->
+      <div class="top-row">
+        <div class="image-column">
+          <img src="../resources/images/curso1.png" alt="Curso 1" class="img-fluid">
+        </div>
+        <div class="text-column">
+          <h1>Curso 1: Introdução à Acupuntura</h1>
+          <p>Neste curso, você aprenderá os fundamentos da acupuntura, incluindo sua história, princípios e técnicas básicas. O curso é ideal para iniciantes que desejam entender melhor essa prática milenar.</p>
+          <p>O curso inclui aulas teóricas e práticas, com demonstrações ao vivo e exercícios práticos. Ao final do curso, você terá uma compreensão sólida dos conceitos básicos da acupuntura e estará preparado para avançar para cursos mais avançados.</p>
+        </div>
+      </div>
+      
+      <!-- Bottom Row: List + Price -->
+      <div class="bottom-row">
+        <div class="list-column">
+          <div class="course-date-container">
+            <h3>Disponivel por tempo limitado!</h3>
+            <div class="course-date">
+              <h2>Disponivel por:</h2>
+              <div class="countdown" id="countdown">
+                <h3 id="time-remaining"></h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="price-column">
+          <div class="price">R$ 299,00</div>
+          <a href="../usuario/comprar.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <div class="spacer" style="height: 50px;"></div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; Facilitando Acupuntura Treinamento e Desenvolvimento Profissional LTDA - CNPJ 35.882.145/0001-48</p>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+  <script>
+
+    const end_date = new Date("2025-04-11T23:59:59Z"); // Data de término da promoção
+    var t = setInterval(updateCountdown, 1000);
+
+    function updateCountdown(){
+      var today_date = new Date();
+      var time_remaining = end_date - today_date;
+
+      var days = Math.floor(time_remaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((time_remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((time_remaining % (1000 * 60)) / 1000);
+  
+     
+      document.getElementById("time-remaining").innerHTML = time_remaining > 0 ? days + "d " + hours + "h " + minutes + "m " + seconds + "s" : "Promoção encerrada!";
+      if (time_remaining < 0) {
+        clearInterval(t);
+        document.getElementById("time-remaining").innerHTML = "Promoção encerrada!";
+      }
+    }
+
+
+
+
+  </script>
