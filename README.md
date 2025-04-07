@@ -2,6 +2,9 @@ Prototype store for facilitando acupuntura.
 
 
 
+INFO:
+
+Carroussel image size, full mobile support with images in the ratio **1920x565**
 
 
 
@@ -16,7 +19,7 @@ TO DO:
 
 - Check image format (support default 12cm x 12 cm)
 
-- Check image size for caroussel
+- Check image size for caroussel ✅
 
 - Add card carrier/flag/company (bandeira)
 
