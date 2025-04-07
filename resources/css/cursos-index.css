@@ -133,7 +133,7 @@ body{
 .best-course-card {
     border: 1px solid #D1A662;
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     transition: all 0.3s ease;
     background: rgb(224, 224, 224);
@@ -149,8 +149,9 @@ body{
 }
 
 .best-course-image {
-    height: 180px;
-    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    object-fit: scale-down;
     border-radius: 5px;
     margin-bottom: 15px;
     width: 100%;
@@ -235,7 +236,7 @@ body{
 }
 
 
-
+/* Max characters 100 characters for <p> */
 .course-card {
     background-color: #e6e4e4;
     color: #333;
@@ -243,7 +244,7 @@ body{
     padding: 0; /* Remove padding from card - we'll add it to inner elements */
     margin: 10px;
     width: 320px;
-    height: 500px;
+    height: 600px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -261,9 +262,9 @@ body{
 
 .course-card img {
     width: 100%;
-    height: 225px;
+    height: 300px;
     /* We'll control height with flex */
-    object-fit: cover;
+    object-fit: scale-down;
     flex-shrink: 0;
 
 }
@@ -280,6 +281,7 @@ body{
 
 .course-card h3 {
     margin: 10px 0;
+    font-size: 1.5rem;
 }
 
 .course-card p {
