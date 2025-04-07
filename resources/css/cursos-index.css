@@ -38,7 +38,7 @@ body{
 
  /* Full-width slideshow */
  .slideshow-container {
-    width: 100vw;
+    width: 100%;
     position: relative;
     left: 50%;
     right: 50%;
@@ -46,7 +46,7 @@ body{
     margin-right: -50vw;
     overflow: hidden;
 }
-
+    /*1920 x 565*/
 .slide {
     display: none;
     width: 100%;
@@ -54,6 +54,7 @@ body{
     max-height: 600px; /* Maximum height */
     min-height: 300px; /* Minimum height */
     position: relative;
+    
 }
 
 .slide img {
@@ -98,6 +99,12 @@ body{
   @media (max-width: 768px) {
     .slide {
         height: 40vh; /* Smaller height on mobile */
+    }
+
+    @media (max-width: 576px) {
+        .slide {
+            height: 30vh; /* Even smaller on smaller devices */
+        }
     }
 }
 
