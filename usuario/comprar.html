@@ -129,7 +129,7 @@
               
               <div class="tab-pane fade" id="pix-form" role="tabpanel" aria-labelledby="pix-tab">
                 <div class="pix-qr-container">
-                  <p>Você será redirecionado para o pagamento via PIX após finalizar a compra.</p>
+                  <p>Expira em: 10 minutos</p>
                   <div class="my-4">
                     <canvas id="pixQrCode" width="200" height="200"></canvas>
                   </div>
@@ -220,8 +220,7 @@
         });
       
         document.getElementById('pix-key').value = mockPixCode;
-        document.querySelector('.pix-qr-container p').textContent = 
-          `Pagamento para: ${mockPixData.courseName}\nValor: ${mockPixData.price}\nID: ${mockPixData.transactionId}`;
+       
       }
       
       function copyPixCode() {
