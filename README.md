@@ -6,6 +6,7 @@ INFO:
 
 Carroussel image size, full mobile support with images in the ratio **1920x565**
 
+Course main list only supports **100 characters** inside the <p> tag
 
 
 
