@@ -1,7 +1,8 @@
-Prototype store for facilitando acupuntura.
+Prototype store for facilitando acupuntura. This will be implemented when ready, at the moment it is being adjusted based on the client requirements and feedback. The navigation should start from the "courses" tab, as the main index.html is a concept for a possible blog visual identity upgrade. 
 
 
 
+(For development/Integration purposes)
 INFO:
 
 Carroussel image size, full mobile support with images in the ratio **1920x565**
