@@ -57,19 +57,26 @@
       <!-- Bottom Row: List + Price -->
       <div class="bottom-row">
         <div class="list-column">
-          <div class="course-date-container">
-            <h3>Disponivel por tempo limitado!</h3>
-            <div class="course-date">
-              <h2>Disponivel por:</h2>
-              <div class="countdown" id="countdown">
-                <h3 id="time-remaining"></h3>
-              </div>
-            </div>
-
+          <div class ="content-list">
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Acesso a materiais de leitura e vídeos</li>
+              <li><i class="fa-solid fa-check"></i> Aulas práticas com instrutores experientes</li>
+              <li><i class="fa-solid fa-check"></i> Vem com Certificação oficial de acupuntura</li>
+              <li><i class="fa-solid fa-check"></i> Apostila original do Facilitando Acupuntura</li>
+            </ul>
           </div>
+            
+
+          
         </div>
         <div class="price-column">
-          <div class="price">R$ 299,00</div>
+          <div class="price">R$ 100,00</div>
+          <div class = "date-column">
+            <h3>Disponível por tempo limitado!</h3>
+            <div class="countdown" id="countdown">
+              <h3 id="time-remaining"></h3>
+            </div>
+          </div>
           <a href="../usuario/comprar.html" class="btn btn-primary">Comprar</a>
         </div>
       </div>
@@ -88,7 +95,7 @@
 
   <script>
 
-    const end_date = new Date("2025-04-11T23:59:59Z"); // Data de término da promoção
+    const end_date = new Date("2025-04-21T23:59:59Z"); // Data de término da promoção
     var t = setInterval(updateCountdown, 1000);
 
     function updateCountdown(){
@@ -100,8 +107,12 @@
       var minutes = Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((time_remaining % (1000 * 60)) / 1000);
   
-     
+      if (days < 1){
       document.getElementById("time-remaining").innerHTML = time_remaining > 0 ? days + "d " + hours + "h " + minutes + "m " + seconds + "s" : "Promoção encerrada!";
+      }
+      else{
+        document.getElementById("time-remaining").innerHTML = time_remaining > 0 ? "Faltam " + days + " dias"  : "Promoção encerrada!";
+      }
       if (time_remaining < 0) {
         clearInterval(t);
         document.getElementById("time-remaining").innerHTML = "Promoção encerrada!";

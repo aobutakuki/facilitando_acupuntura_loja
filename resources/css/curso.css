@@ -93,6 +93,7 @@ body{
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    
   }
   
   /* Keep all your existing .course-features styles */
@@ -127,6 +128,7 @@ body{
   }
   
   .btn {
+    
     background-color: #220A38;
     border: 2px solid #D1A662;
     padding: 8px 20px;
@@ -139,6 +141,27 @@ body{
     background-color: #f6f7f6;
     color: #220A38;
   }
+
+  .list-column ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .list-column i{
+    color:#D1A662;
+    margin-right: 10px;
+  }
+
+  .list-column li {
+    margin-bottom: 10px;
+    color: #f6f7f6;
+  }
+
+  .date-column h3{
+   font-size: 10px !important;
+  }
+
+
 
   .footer {
     background-color: #220A38; /* Match your theme */
