@@ -225,6 +225,55 @@ body{
     color:#eeecec;
 }
 
+/* Hide the default checkbox */
+.checkbox-group .checkbox {
+    display: none;
+  }
+  
+.checkbox-group {
+    width: 350px;
+    margin-left: 580px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  /* Custom checkbox */
+  .checkbox-group .custom-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #D1A662;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Style when checked */
+  .checkbox-group .checkbox:checked + .custom-checkbox {
+    background-color: #220A38;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="12px" height="12px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+.checkbox-group button{
+    background-color: #220A38;
+    color: #fff;
+    border: 1px solid #D1A662;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.checkbox-group button:hover{
+    background-color: #D1A662;
+    color: #220A38;
+    transition: all 0.3s ease;
+}
+
+
 .course-container {
     display: flex;
     justify-content: center; /* This centers the content horizontally */
