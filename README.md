@@ -25,13 +25,13 @@ TO DO:
 
 - Check image size for caroussel ✅
 
-- Add card carrier/flag/company (bandeira)
+- Add card carrier/flag/company (bandeira) ✅
 
 - Test card with more items, add support
 
-- Add monthly payment to credit card
+- Add monthly payment to credit card ✅
 
-- Nationality combo box
+- Nationality combo box ✅
 
 - Fix item description and timer✅
 
