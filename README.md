@@ -11,7 +11,9 @@ Course main list only supports **100 characters** inside the 'p' tag and **45 ch
 
 Supports default 450x450 images
 
-
+⚠ - Most liekly requires backend for full functionality
+🟡 - WIP/Partial functionality
+✅ - Feature added/Problem solved
 
 TO DO:
 
@@ -38,3 +40,5 @@ TO DO:
 - Verify and add a single font for the whole site
 
 - Add the ability to filter by videos, courses and text books 🟡
+
+- Must add support to search as the user is typing on the search bar ⚠
