@@ -62,7 +62,18 @@
             
             <div class="form-group">
               <label for="user-nationality">Nacionalidade</label>
-              <input type="text" class="form-control" id="user-nationality" placeholder="Digite sua nacionalidade">
+              <div class="custom-select">
+                <select class="form-control" id="user-nationality">
+                  <option value="" selected disabled>Selecione sua nacionalidade</option>
+                  <option value="Brasileiro">Brasileiro</option>
+                  <option value="Português">Português</option>
+                  <option value="Espanhol">Espanhol</option>
+                  <option value="Americano">Americano</option>
+                  <option value="Argentino">Argentino</option>
+                  <option value="Chileno">Chileno</option>
+                  <!-- Add more options as needed -->
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -109,6 +120,28 @@
                 <div class="form-group mb-3">
                   <label for="card-name">Nome no Cartão</label>
                   <input type="text" class="form-control" id="card-name" placeholder="Nome como está no cartão">
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="card-flag">Bandeira do Cartão</label>
+                  <select class="form-control" id="payment-method">
+                    <option value="" selected disabled>Selecione a bandeira do cartão</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="American Express">American Express</option>
+                    <option value="Elo">Elo</option>
+                    <option value="Hipercard">Hipercard</option>
+                  </select>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="card-installments">Parcelas</label>
+                  <select class="form-control" id="card-installments">
+                    <option value="" selected disabled>Selecione o número de parcelas</option>
+                    <option value="1">À vista</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                  </select>
                 </div>
                 
                 <div class="row">
@@ -243,6 +276,8 @@
         document.querySelector('.mock-payment-modal').remove();
         alert('Pagamento confirmado com sucesso! Curso liberado.');
       };
+
+      
     </script>
   </body>
 </html>
