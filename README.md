@@ -37,4 +37,4 @@ TO DO:
 
 - Verify and add a single font for the whole site
 
-- Add the ability to filter by videos, courses and text books
+- Add the ability to filter by videos, courses and text books 🟡
