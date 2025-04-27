@@ -31,8 +31,10 @@ TO DO:
 
 - Nationality combo box
 
-- Fix item description and timer
+- Fix item description and timer✅
+
+- Style bullet list and timer ✅
 
 - Verify and add a single font for the whole site
 
-- Add the ability to filter by videos, courses and text books
+- Add the ability to filter by videos, courses and text books 🟡
