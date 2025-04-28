@@ -11,15 +11,25 @@ Course main list only supports **100 characters** inside the 'p' tag and **45 ch
 
 Supports default 450x450 images
 
+Checkout page cart supports up to 5 items in the cart before layout starts to behaving weirdly, or get different, might require a different solution, like pagination or hide the rest of the items
+
+Checkout mobile cart page supports up to **30 characters** in title
+
+
+
+
+
 ⚠ - Most liekly requires backend for full functionality
+
 🟡 - WIP/Partial functionality
+
 ✅ - Feature added/Problem solved
 
 TO DO:
 
 - Remove "Pagamento para: " from pix ✅
 
-- Check bootstrap and elements for mobile support
+- Check bootstrap and elements for mobile support 🟡
 
 - Check image format (support default 12cm x 12 cm) ✅
 
