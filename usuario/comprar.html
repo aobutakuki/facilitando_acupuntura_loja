@@ -24,19 +24,42 @@
     
     <div class="head_bar">
       <div class="container">
-        <div class="row">
-          <div class="col-2 d-flex align-items-center">
-            <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
-            <h5 class="mb-0">Facilitando Acupuntura</h5>
+          <div class="row desktop-nav">
+              <div class="col-2 d-flex align-items-center">
+                  <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                  <h5 class="mb-0">Facilitando Acupuntura</h5>
+              </div>
+              <div class="col-6"></div>
+              <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
+              <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
+              <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
+              <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
           </div>
-          <div class="col-6"></div>
-          <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
-          <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
-          <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
-          <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
-        </div>
+          
+          <!-- Mobile Navigation -->
+          <div class="mobile-nav">
+              <div class="mobile-nav-header">
+                  <div class="d-flex align-items-center">
+                      <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                      <h5 class="mb-0">Facilitando Acupuntura</h5>
+                  </div>
+                  <a href="#" class="hamburger-icon" onclick="toggleMobileMenu()">
+                      <i class="fas fa-bars"></i>
+                  </a>
+              </div>
+              <div id="mobileLinks" class="mobile-links">
+                  <a href="./blog/index.html" class="nav-link">Blog</a>
+                  <a href="/sobre" class="nav-link">Sobre</a>
+                  <a href="../cursos/index.html" class="nav-link">Cursos</a>
+                  <a href="../usuario/carrinho.html" class="nav-link">Carrinho</a>
+              </div>
+          </div>
       </div>
-    </div>
+      <div class="spacer" style="height: 10px;"></div>
+      <div class="spacer-line"></div>
+      <div class="spacer" style="height: 10px;"></div>
+  </div>
+<div class="spacer" style="height: 20px;"></div>
 
     <div class="container main-container">
       <div class="row">
@@ -83,15 +106,46 @@
           <h3 class="section-title">Resumo da compra</h3>
           
           <div class="payment-card">
-            <div class="d-flex justify-content-between mb-2">
-              <p>Curso 1: Introdução à Acupuntura</p>
+            <div class="cart-content">
+            <div class="d-flex justify-content-between mb-2" id="cart-item-0">
+              <p>Curso 1: Introdução à Acupun..</p>
               <p class="price">R$ 99,00</p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2" id="cart-item-0">
+              <p>Curso 2: Super Acupuntura</p>
+              <p class="price">R$ 199,00</p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2" id="cart-item-1">
+              <p>Video 1: Acupuntura Chinesa</p>
+              <p class="price">R$ 245,00</p>
+            </div>
+            
+            <div class="d-flex justify-content-between mb-2" id="cart-item-2">
+              <p>Video 2: Acupuntura Chinesa</p>
+              <p class="price">R$ 245,00</p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2" id="cart-item-3">
+              <p>Video 3: Acupuntura Chinesa</p>
+              <p class="price">R$ 245,00</p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2" id="cart-item-4">
+              <p>Video 4: Acupuntura Chinesa</p>
+              <p class="price">R$ 245,00</p>
+            </div>
+          </div>
+            <div class="cart-toggle" onclick="toggleCartItems()">
+              Ver todos os itens <i class="fas fa-chevron-down"></i>
             </div>
             
             <div class="d-flex justify-content-between mt-3 pt-2 border-top">
               <p class="total-price">Total:</p>
               <p class="total-price">R$ 99,00</p>
             </div>
+          </div>
           </div>
           
           <div class="payment-card">
@@ -189,6 +243,35 @@
     </div>
 
     <script>
+
+function toggleCartItems() {
+  const cartContent = document.querySelector('.cart-content');
+  const toggleBtn = document.querySelector('.cart-toggle');
+  
+  cartContent.classList.toggle('expanded');
+  toggleBtn.classList.toggle('expanded');
+  
+  if (cartContent.classList.contains('expanded')) {
+    toggleBtn.innerHTML = 'Mostrar menos <i class="fas fa-chevron-up"></i>';
+  } else {
+    toggleBtn.innerHTML = 'Ver todos os itens <i class="fas fa-chevron-down"></i>';
+  }
+}
+
+function toggleMobileMenu() {
+  const mobileLinks = document.getElementById("mobileLinks");
+  const hamburgerIcon = document.querySelector('.hamburger-icon i');
+  
+  if (mobileLinks.style.display === "block") {
+    mobileLinks.style.display = "none";
+    hamburgerIcon.classList.remove('fa-times');
+    hamburgerIcon.classList.add('fa-bars');
+  } else {
+    mobileLinks.style.display = "block";
+    hamburgerIcon.classList.remove('fa-bars');
+    hamburgerIcon.classList.add('fa-times');
+  }
+}
       // Initialize tabs and PIX generation
       document.addEventListener('DOMContentLoaded', function() {
         // Generate PIX when tab is shown

@@ -19,23 +19,44 @@
   </head>
   <body>
     
-<div class="head_bar">
-    <div class = "container">
-        <div class="row">
-            <div class="col-2 d-flex align-items-center">
-                <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
-                <h5 class="mb-0">Facilitando Acupuntura</h5></div>
-            <div class="col-6"></div>
-            <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
-            <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
-            <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
-            <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
-        </div>
-    </div>
-    <div class="spacer" style="height: 10px;"></div>
-    <div class="spacer-line"></div>
-    <div class="spacer" style="height:10px;"></div>
-</div>
+    <div class="head_bar">
+      <div class="container">
+          <div class="row desktop-nav">
+              <div class="col-2 d-flex align-items-center">
+                  <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                  <h5 class="mb-0">Facilitando Acupuntura</h5>
+              </div>
+              <div class="col-6"></div>
+              <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
+              <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
+              <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
+              <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+          </div>
+          
+          <!-- Mobile Navigation -->
+          <div class="mobile-nav">
+              <div class="mobile-nav-header">
+                  <div class="d-flex align-items-center">
+                      <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                      <h5 class="mb-0">Facilitando Acupuntura</h5>
+                  </div>
+                  <a href="#" class="hamburger-icon" onclick="toggleMobileMenu()">
+                      <i class="fas fa-bars"></i>
+                  </a>
+              </div>
+              <div id="mobileLinks" class="mobile-links">
+                  <a href="./blog/index.html" class="nav-link">Blog</a>
+                  <a href="/sobre" class="nav-link">Sobre</a>
+                  <a href="../cursos/index.html" class="nav-link">Cursos</a>
+                  <a href="../usuario/carrinho.html" class="nav-link">Carrinho</a>
+              </div>
+          </div>
+      </div>
+      <div class="spacer" style="height: 10px;"></div>
+      <div class="spacer-line"></div>
+      <div class="spacer" style="height: 10px;"></div>
+  </div>
+<div class="spacer" style="height: 20px;"></div>
 
 
 <div class="purple-bg">
@@ -46,8 +67,14 @@
       <div class="top-row">
         <div class="image-column">
           <img src="../resources/images/curso1.png" alt="Curso 1" class="img-fluid">
+          <div class="content-type">
+            <i class="fas fa-video" style="color:#D1A662;"></i>
+            <i class="fas fa-book" style="color:white"></i>
+            <i class="fas fa-graduation-cap" style="color:#D1A662"></i>
+          </div>
         </div>
         <div class="text-column">
+
           <h1>Curso 1: Introdução à Acupuntura</h1>
           <p>Neste curso, você aprenderá os fundamentos da acupuntura, incluindo sua história, princípios e técnicas básicas. O curso é ideal para iniciantes que desejam entender melhor essa prática milenar.</p>
           <p>O curso inclui aulas teóricas e práticas, com demonstrações ao vivo e exercícios práticos. Ao final do curso, você terá uma compreensão sólida dos conceitos básicos da acupuntura e estará preparado para avançar para cursos mais avançados.</p>
@@ -94,6 +121,21 @@
   </body>
 
   <script>
+
+    function toggleMobileMenu() {
+  const mobileLinks = document.getElementById("mobileLinks");
+  const hamburgerIcon = document.querySelector('.hamburger-icon i');
+  
+  if (mobileLinks.style.display === "block") {
+    mobileLinks.style.display = "none";
+    hamburgerIcon.classList.remove('fa-times');
+    hamburgerIcon.classList.add('fa-bars');
+  } else {
+    mobileLinks.style.display = "block";
+    hamburgerIcon.classList.remove('fa-bars');
+    hamburgerIcon.classList.add('fa-times');
+  }
+}
 
     const end_date = new Date("2025-04-21T23:59:59Z"); // Data de término da promoção
     var t = setInterval(updateCountdown, 1000);
