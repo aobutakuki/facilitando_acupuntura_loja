@@ -18,6 +18,52 @@ body{
     height: 100%;
     padding: 0.5rem 1.2rem; /* Adjust padding as needed */
 }
+
+.mobile-nav {
+    display: none;
+    position: relative;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.hamburger-icon {
+    font-size: 1.5rem;
+    color: #220A38;
+    cursor: pointer;
+}
+
+.mobile-links {
+    top: 100%; /* Positions directly below the header */
+    right: 0; /* Aligns with the right edge of the parent (.mobile-nav) */
+    width: auto; /* Let content determine width (or set a fixed width) */
+    min-width: 150px; /* Minimum width to prevent squeezing */
+    display: none;
+    position: absolute;
+    background-color: #f6f7f6;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    z-index: 1001; /* Ensure it appears above other content */
+}
+
+.mobile-links a {
+    display: block;
+    padding: 10px 15px;
+    color: #220A38;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-links a:hover {
+    background-color: #e6e4e4;
+    color: #5a5b9f;
+    z-index: 1001; /* Ensure it appears above other content */
+}
 .spacer-line{
     border-bottom: #5a5b9f 2px solid;
     width: 100%;
@@ -38,7 +84,7 @@ body{
 
  /* Full-width slideshow */
  .slideshow-container {
-    width: 100%;
+    width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
@@ -53,7 +99,6 @@ body{
     height: 60vh; /* Adjust this value to control height */
     max-height: 600px; /* Maximum height */
     min-height: 300px; /* Minimum height */
-    position: relative;
     
 }
 
@@ -61,6 +106,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures image covers the area while maintaining aspect ratio */
+    object-position: center;
 }
 
 
@@ -273,6 +319,8 @@ body{
     transition: all 0.3s ease;
 }
 
+
+
 .search-bar{
     width: 450px;
     margin-left: 530px;
@@ -363,9 +411,188 @@ body{
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 100px) and (max-width: 979px) {
+    /* Header adjustments */
+    .head_bar .row {
+        flex-wrap: wrap;
+    }
+    .head_bar .col-2, 
+    .head_bar .col-sm-auto {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .head_bar .col-6 {
+        display: none;
+    }
+
+    /* Slideshow adjustments */
+    .slideshow-container {
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    .slide {
+        height: 30vh;
+    }
+    .text {
+        font-size: 12px;
+    }
+
+    /* Best selling courses */
+    .best-selling-courses-container .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .best-selling-courses-container .col-md-4 {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+
+    /* All courses section */
+    .all-courses .container {
+        padding: 0 15px;
+    }
+    .search-bar {
+        width: 90%;
+        margin: 0 auto 15px;
+    }
+    .checkbox-group {
+        width: 90%;
+        margin: 0 auto 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .checkbox-group label {
+        margin: 5px 10px;
+    }
+    .checkbox-group button {
+        margin: 10px auto 0;
+    }
+
+    /* Course cards */
+    .course-container {
+        padding: 10px;
+    }
     .course-card {
         width: 100%;
         max-width: 350px;
+        height: auto;
+        min-height: 500px;
+    }
+    .course-card img {
+        height: 200px;
+    }
+    .course-content {
+        padding: 10px;
+    }
+    .course-card h3 {
+        font-size: 1.2rem;
+    }
+    .buy-container {
+        padding: 10px;
+    }
+
+    .head_bar .col-6{
+        display:none;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-nav {
+        display: block;
+    }
+    
+    .head_bar .col-6 {
+        display: none;
     }
 }
+
+@media (min-width: 980px) and (max-width: 1023px) {
+ 
+
+    /* Show mobile nav on iPad */
+    .mobile-nav {
+        display: block;
+    }
+
+    /* Ensure mobile menu aligns properly */
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Mobile menu styling */
+    .mobile-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #f6f7f6;
+        width: 200px; /* Fixed width for iPad */
+        border: 1px solid #ddd;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .mobile-links a {
+        display: block;
+        padding: 10px 15px;
+        text-align: right; /* Align links to the right */
+    }
+
+    .course-card {
+        width: 100%;
+        max-width: 370px;
+        height: auto;
+        height: 650px;
+    }
+
+    .course-content {
+        padding: 10px;
+    }
+  
+    .slide {
+        height: 40vh; 
+    }
+
+    .course-card {
+        max-width: 300px; /* Slightly smaller cards for iPad */
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1024px) {
+    /* iPad-specific checkbox alignment */
+    .checkbox-group {
+      width: 100%;
+      margin: 0 auto 15px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+  
+    .search-bar {
+      width: 80%;
+      margin: 0 auto 15px;
+    }
+  
+    /* Optional: Adjust spacing between checkboxes */
+    .checkbox-group label {
+      margin: 0 10px;
+    }
+  }
+
+    @media (min-width: 1025px) {
+        .desktop-nav {
+            display: flex !important; /* Force show desktop nav */
+            flex-wrap: nowrap; /* Prevent wrapping */
+        }
+        .mobile-nav {
+            display: none;
+        }
+    }
+

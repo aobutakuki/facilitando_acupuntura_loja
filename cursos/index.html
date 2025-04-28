@@ -12,31 +12,50 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     
-<div class="head_bar">
-    <div class = "container">
-        <div class="row">
-            <div class="col-2 d-flex align-items-center">
-                <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
-                <h5 class="mb-0">Facilitando Acupuntura</h5></div>
-            <div class="col-6"></div>
-            <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
-            <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
-            <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
-            <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
-        </div>
-    </div>
-    <div class="spacer" style="height: 10px;"></div>
-    <div class="spacer-line"></div>
-    <div class="spacer" style="height: 10px;"></div>
-</div>
-
+    <div class="head_bar">
+      <div class="container">
+          <div class="row desktop-nav">
+              <div class="col-2 d-flex align-items-center">
+                  <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                  <h5 class="mb-0">Facilitando Acupuntura</h5>
+              </div>
+              <div class="col-6"></div>
+              <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
+              <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
+              <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
+              <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+          </div>
+          
+          <!-- Mobile Navigation -->
+          <div class="mobile-nav">
+              <div class="mobile-nav-header">
+                  <div class="d-flex align-items-center">
+                      <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                      <h5 class="mb-0">Facilitando Acupuntura</h5>
+                  </div>
+                  <a href="#" class="hamburger-icon" onclick="toggleMobileMenu()">
+                      <i class="fas fa-bars"></i>
+                  </a>
+              </div>
+              <div id="mobileLinks" class="mobile-links">
+                  <a href="./blog/index.html" class="nav-link">Blog</a>
+                  <a href="/sobre" class="nav-link">Sobre</a>
+                  <a href="../cursos/index.html" class="nav-link">Cursos</a>
+                  <a href="../usuario/carrinho.html" class="nav-link">Carrinho</a>
+              </div>
+          </div>
+      </div>
+      <div class="spacer" style="height: 10px;"></div>
+      <div class="spacer-line"></div>
+      <div class="spacer" style="height: 10px;"></div>
+  </div>
 <div class="spacer" style="height: 20px;"></div>
 
 <div class="slideshow-container">
@@ -170,7 +189,7 @@
           
     </div>
 
-    <div class="course-container">
+<div class="course-container">
 <!-- Course 1 -->
 <div class="course-card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
     <img src="../resources/images/curso1.png" alt="curso1" class="img-fluid">
@@ -460,8 +479,24 @@
       </div>
     </div>
   </div>
+  
 
 <script>
+
+function toggleMobileMenu() {
+  const mobileLinks = document.getElementById("mobileLinks");
+  const hamburgerIcon = document.querySelector('.hamburger-icon i');
+  
+  if (mobileLinks.style.display === "block") {
+    mobileLinks.style.display = "none";
+    hamburgerIcon.classList.remove('fa-times');
+    hamburgerIcon.classList.add('fa-bars');
+  } else {
+    mobileLinks.style.display = "block";
+    hamburgerIcon.classList.remove('fa-bars');
+    hamburgerIcon.classList.add('fa-times');
+  }
+}
     let slideIndex = 0;
     let slideInterval;
     
@@ -540,8 +575,5 @@
     });
 
 </script>
-
-  </body>
-
-</html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1j6z4v2
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
