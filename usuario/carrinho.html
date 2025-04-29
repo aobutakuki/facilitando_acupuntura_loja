@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Facilitando Acupuntura</title>
    
     <link rel="icon" type="image/x-icon" href="../resources/images/logo.png">
@@ -19,23 +19,44 @@
   </head>
   <body>
     
-<div class="head_bar">
-    <div class = "container">
-        <div class="row">
-            <div class="col-2 d-flex align-items-center">
-                <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
-                <h5 class="mb-0">Facilitando Acupuntura</h5></div>
-            <div class="col-6"></div>
-            <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
-            <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
-            <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
-            <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+    <div class="head_bar">
+        <div class="container">
+            <div class="row desktop-nav">
+                <div class="col-2 d-flex align-items-center">
+                    <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                    <h5 class="mb-0">Facilitando Acupuntura</h5>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
+                <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
+                <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
+                <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-header">
+                    <div class="d-flex align-items-center">
+                        <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                        <h5 class="mb-0">Facilitando Acupuntura</h5>
+                    </div>
+                    <a href="#" class="hamburger-icon" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                <div id="mobileLinks" class="mobile-links">
+                    <a href="./blog/index.html" class="nav-link">Blog</a>
+                    <a href="/sobre" class="nav-link">Sobre</a>
+                    <a href="../cursos/index.html" class="nav-link">Cursos</a>
+                    <a href="../usuario/carrinho.html" class="nav-link">Carrinho</a>
+                </div>
+            </div>
         </div>
+        <div class="spacer" style="height: 10px;"></div>
+        <div class="spacer-line"></div>
+        <div class="spacer" style="height: 10px;"></div>
     </div>
-    <div class="spacer" style="height: 10px;"></div>
-    <div class="spacer-line"></div>
-    <div class="spacer" style="height:10px;"></div>
-</div>
+  <div class="spacer" style="height: 20px;"></div>
 
 <div class="purple-bg">
     <div class="spacer" style="height: 20px;"></div>
@@ -55,7 +76,7 @@
                         <p class="product-price">R$ 299,00</p>
                     </div>
                 </a>
-                <button class="btn btn-danger remove-button">Remover</button>
+                <button class="btn btn-danger remove-button"><i class="fas fa-trash"></i></button>
             </div>
             <div class="product-item">
                 <a href="../cursos/curso2.html" class="product-link">
@@ -65,7 +86,7 @@
                         <p class="product-price">R$ 99,00</p>
                     </div>
                 </a>
-                <button class="btn btn-danger remove-button">Remover</button>
+                <button class="btn btn-danger remove-button"><i class="fas fa-trash"></i></button>
             </div>
         </div>
         <div class="carrinho-info">
@@ -73,3 +94,21 @@
             <a href ="../usuario/comprar.html" class="btn checkout-button">Finalizar Compra</a>
         </div>
     </div>
+    <div class="spacer" style="height: 15px;"></div>
+
+    <script>
+         function toggleMobileMenu() {
+  const mobileLinks = document.getElementById("mobileLinks");
+  const hamburgerIcon = document.querySelector('.hamburger-icon i');
+  
+  if (mobileLinks.style.display === "block") {
+    mobileLinks.style.display = "none";
+    hamburgerIcon.classList.remove('fa-times');
+    hamburgerIcon.classList.add('fa-bars');
+  } else {
+    mobileLinks.style.display = "block";
+    hamburgerIcon.classList.remove('fa-bars');
+    hamburgerIcon.classList.add('fa-times');
+  }
+}
+    </script>

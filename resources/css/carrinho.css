@@ -37,6 +37,53 @@
     border-bottom: #5a5b9f 2px solid;
     width: 100%;
 }
+
+.mobile-nav {
+    display: none;
+    position: relative;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .hamburger-icon {
+    font-size: 1.5rem;
+    color: #220A38;
+    cursor: pointer;
+  }
+  
+  .mobile-links {
+    top: 100%; /* Positions directly below the header */
+    right: 0; /* Aligns with the right edge of the parent (.mobile-nav) */
+    width: auto; /* Let content determine width (or set a fixed width) */
+    min-width: 150px; /* Minimum width to prevent squeezing */
+    display: none;
+    position: absolute;
+    background-color: #f6f7f6;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    z-index: 1001; /* Ensure it appears above other content */
+  }
+  
+  .mobile-links a {
+    display: block;
+    padding: 10px 15px;
+    color: #220A38;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-links a:hover {
+    background-color: #e6e4e4;
+    color: #5a5b9f;
+    z-index: 1001; /* Ensure it appears above other content */
+  }
+
   
 .purple-bg{
     display: flex;
@@ -135,4 +182,256 @@
 .carrinho-info a:hover{
     background-color: var(--secondary);
     color: var(--primary);
+}
+
+
+@media (min-width: 100px) and (max-width: 979px) {
+    .desktop-nav {
+        display: none;
+      }
+    /* Show mobile nav on iPad */
+    .mobile-nav {
+        display: block;
+    }
+
+    .head_bar .row {
+        flex-wrap: wrap;
+      }
+      .head_bar .col-2, 
+      .head_bar .col-sm-auto {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .head_bar .col-6 {
+        display: none;
+      }
+      
+      .head_bar {
+        height: 76px;
+      }
+
+    /* Ensure mobile menu aligns properly */
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Mobile menu styling */
+    .mobile-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #f6f7f6;
+        width: 200px; /* Fixed width for iPad */
+        border: 1px solid #ddd;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .mobile-links a {
+        display: block;
+        padding: 10px 15px;
+        text-align: right; /* Align links to the right */
+    }
+
+    .carrinho-container {
+        width: 95% !important; /* Make it almost full width */
+        padding: 15px !important; /* Reduce padding */
+        margin: 10px auto !important; /* Center with smaller margins */
+    }
+
+    .product-item {
+        flex-direction: row; /* Stack items vertically */
+        gap: 15px !important;
+        padding: 10px !important;
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .product-link {
+        flex-direction: row; /* Stack image and details */
+        gap: 10px !important;
+        width: 100%;
+    }
+
+    .product-item img {
+        width: 80px !important;
+        height: 80px !important;
+        align-self: center; /* Center the image */
+    }
+
+    .product-details {
+        width: 100%;
+        text-align: center; /* Center the text */
+    }
+
+    .remove-button {
+        position: static !important; /* Remove absolute positioning */
+        transform: none !important;
+        align-self: center; /* Center the button */
+        margin-top: 10px;
+        padding: 8px 15px !important; /* Smaller button */
+        font-size: 0.9rem !important;
+    }
+
+    .carrinho-info {
+        text-align: center; /* Center the total and button */
+    }
+
+    .checkout-button {
+        padding: 10px 15px !important; /* Smaller button */
+        font-size: 0.9rem !important;
+        width: 100%; /* Full width button */
+        max-width: 200px; /* But not too wide */
+        margin: 0 auto; /* Center the button */
+    }
+
+    .product-name, .product-price {
+        font-size: 0.85rem !important; /* Slightly smaller text */
+    }
+
+    #title {
+        font-size: 1.4rem !important; /* Smaller title */
+    }
+
+    #description {
+        font-size: 0.85rem !important; /* Smaller description */
+    }
+
+}
+
+
+@media (min-width: 980px) and (max-width: 1024px) {
+ 
+
+    .desktop-nav {
+        display: none;
+      }
+    /* Show mobile nav on iPad */
+    .mobile-nav {
+        display: block;
+    }
+
+    .head_bar .row {
+        flex-wrap: wrap;
+      }
+      .head_bar .col-2, 
+      .head_bar .col-sm-auto {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .head_bar .col-6 {
+        display: none;
+      }
+      
+      .head_bar {
+        height: 66px;
+      }
+
+    /* Ensure mobile menu aligns properly */
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Mobile menu styling */
+    .mobile-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #f6f7f6;
+        width: 200px; /* Fixed width for iPad */
+        border: 1px solid #ddd;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .mobile-links a {
+        display: block;
+        padding: 10px 15px;
+        text-align: right; /* Align links to the right */
+    }
+
+    .carrinho-container {
+        width: 95% !important; /* Make it almost full width */
+        padding: 15px !important; /* Reduce padding */
+        margin: 10px auto !important; /* Center with smaller margins */
+    }
+
+    .product-item {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px !important;
+        padding: 15px !important;
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .product-link {
+        flex-direction: column; /* Stack image and details */
+        gap: 10px !important;
+        width: 100%;
+    }
+
+    .product-item img {
+        width: 80px !important;
+        height: 80px !important;
+        align-self: center; /* Center the image */
+    }
+
+    .product-details {
+        width: 100%;
+        text-align: center; /* Center the text */
+    }
+
+    .remove-button {
+        position: static !important; /* Remove absolute positioning */
+        transform: none !important;
+        align-self: center; /* Center the button */
+        margin-top: 10px;
+        padding: 8px 15px !important; /* Smaller button */
+        font-size: 0.9rem !important;
+    }
+
+    .carrinho-info {
+        text-align: center; /* Center the total and button */
+    }
+
+    .checkout-button {
+        padding: 10px 15px !important; /* Smaller button */
+        font-size: 0.9rem !important;
+        width: 100%; /* Full width button */
+        max-width: 200px; /* But not too wide */
+        margin: 0 auto; /* Center the button */
+    }
+
+    .product-name, .product-price {
+        font-size: 0.9rem !important; /* Slightly smaller text */
+    }
+
+    #title {
+        font-size: 1.5rem !important; /* Smaller title */
+    }
+
+    #description {
+        font-size: 0.9rem !important; /* Smaller description */
+    }
+    
+  }
+
+  @media (min-width: 1025px) {
+    .desktop-nav {
+        display: flex !important; /* Force show desktop nav */
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+    .mobile-nav {
+        display: none;
+    }
 }
