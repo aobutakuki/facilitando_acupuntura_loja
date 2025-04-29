@@ -19,23 +19,44 @@
   </head>
   <body>
     
-<div class="head_bar">
-    <div class = "container">
-        <div class="row">
-            <div class="col-2 d-flex align-items-center">
-                <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
-                <h5 class="mb-0">Facilitando Acupuntura</h5></div>
-            <div class="col-6"></div>
-            <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
-            <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
-            <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
-            <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+    <div class="head_bar">
+        <div class="container">
+            <div class="row desktop-nav">
+                <div class="col-2 d-flex align-items-center">
+                    <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                    <h5 class="mb-0">Facilitando Acupuntura</h5>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-sm-auto"><a href="./blog/index.html" class="nav-link">Blog</a></div>
+                <div class="col-sm-auto"><a href="/sobre" class="nav-link">Sobre</a></div>
+                <div class="col-sm-auto"><a href="../cursos/index.html" class="nav-link">Cursos</a></div>
+                <div class="col-sm-auto"><a href="../usuario/carrinho.html" class="nav-link">Carrinho</a></div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-header">
+                    <div class="d-flex align-items-center">
+                        <img src="../resources/images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                        <h5 class="mb-0">Facilitando Acupuntura</h5>
+                    </div>
+                    <a href="#" class="hamburger-icon" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                <div id="mobileLinks" class="mobile-links">
+                    <a href="./blog/index.html" class="nav-link">Blog</a>
+                    <a href="/sobre" class="nav-link">Sobre</a>
+                    <a href="../cursos/index.html" class="nav-link">Cursos</a>
+                    <a href="../usuario/carrinho.html" class="nav-link">Carrinho</a>
+                </div>
+            </div>
         </div>
+        <div class="spacer" style="height: 10px;"></div>
+        <div class="spacer-line"></div>
+        <div class="spacer" style="height: 10px;"></div>
     </div>
-    <div class="spacer" style="height: 10px;"></div>
-    <div class="spacer-line"></div>
-    <div class="spacer" style="height:10px;"></div>
-</div>
+  <div class="spacer" style="height: 20px;"></div>
 
 
 <div class="purple-bg">
@@ -63,8 +84,8 @@
         <div class="content">
             <h2>Conteudo</h2>
             <ul>
-                <a href="apostila.pdf" download="apostila.pdf"><li id="apostila">Apostila</li></a>
-                <a href="video.mp4" download="video.mp4"><li id="video">Vídeo</li></a>
+                <a href="apostila.pdf" download="apostila.pdf"><li id="apostila">Apostila <i class="fas fa-book" style="margin-left: 5px; color:#D1A662"></i></li></a>
+                <a href="video.mp4" download="video.mp4"><li id="video">Vídeo <i class="fas fa-video" style="margin-left: 5px; color:#D1A662;"></i></li></a>
             </ul>
         </div>
         <div class="course-features">
@@ -77,3 +98,20 @@
         </div>
     </div>
 </div>
+
+<script>
+     function toggleMobileMenu() {
+  const mobileLinks = document.getElementById("mobileLinks");
+  const hamburgerIcon = document.querySelector('.hamburger-icon i');
+  
+  if (mobileLinks.style.display === "block") {
+    mobileLinks.style.display = "none";
+    hamburgerIcon.classList.remove('fa-times');
+    hamburgerIcon.classList.add('fa-bars');
+  } else {
+    mobileLinks.style.display = "block";
+    hamburgerIcon.classList.remove('fa-bars');
+    hamburgerIcon.classList.add('fa-times');
+  }
+}
+</script>

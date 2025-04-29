@@ -42,6 +42,52 @@ body{
     text-decoration: none;
 }
 
+.mobile-nav {
+    display: none;
+    position: relative;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .hamburger-icon {
+    font-size: 1.5rem;
+    color: #220A38;
+    cursor: pointer;
+  }
+  
+  .mobile-links {
+    top: 100%; /* Positions directly below the header */
+    right: 0; /* Aligns with the right edge of the parent (.mobile-nav) */
+    width: auto; /* Let content determine width (or set a fixed width) */
+    min-width: 150px; /* Minimum width to prevent squeezing */
+    display: none;
+    position: absolute;
+    background-color: #f6f7f6;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    z-index: 1001; /* Ensure it appears above other content */
+  }
+  
+  .mobile-links a {
+    display: block;
+    padding: 10px 15px;
+    color: #220A38;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-links a:hover {
+    background-color: #e6e4e4;
+    color: #5a5b9f;
+    z-index: 1001; /* Ensure it appears above other content */
+  }
+
 .purple-bg {
     background-color: #220A38;
     padding: 20px 0;
@@ -138,8 +184,44 @@ body{
     margin-right: 5px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
+
+
+@media (min-width: 100px) and (max-width: 979px) {
+    .desktop-nav {
+      display: none;
+    }
+    
+    .mobile-nav {
+      display: block;
+    }
+    
+    /* Header adjustments */
+    .head_bar .row {
+      flex-wrap: wrap;
+    }
+    .head_bar .col-2, 
+    .head_bar .col-sm-auto {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .head_bar .col-6 {
+      display: none;
+    }
+
+    .content-type{
+      margin-top: 13px;
+      font-size: 1.3em;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+  
+    .head_bar {
+      height: 66px;
+    }
+
     .top-row {
         flex-direction: column;
         height: auto;
@@ -152,5 +234,127 @@ body{
     
     .hybrid-container {
         grid-template-rows: auto auto;
+    }
+
+    .features{
+        font-size:80%;
+       
+    }
+
+    .content{
+        font-size: 80%;
+    }
+
+    .content h2{
+        font-size: 1.2em;
+    }
+
+    .hybrid-container {
+        grid-template-rows: auto auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 90%; 
+        margin: 0 auto; 
+    }
+
+    .top-row, .bottom-row {
+        width: 100%; /* Make children take full width of container */
+    }
+
+    .bottom-row {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; /* Centers the child elements horizontally */
+        text-align: center; /* Centers the text content */
+        width: 100%;
+    }
+
+    .content, .course-features {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the content inside these containers */
+    }
+
+    .content ul, .course-features ul {
+        padding-left: 0; /* Remove default padding */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content li, .course-features li {
+        text-align: center; /* Ensures text within list items is centered */
+    }
+
+}
+
+@media (min-width: 980px) and (max-width: 1024px) {
+ 
+
+    .desktop-nav {
+        display: none;
+      }
+    /* Show mobile nav on iPad */
+    .mobile-nav {
+        display: block;
+    }
+
+    .head_bar .row {
+        flex-wrap: wrap;
+      }
+      .head_bar .col-2, 
+      .head_bar .col-sm-auto {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .head_bar .col-6 {
+        display: none;
+      }
+      
+      .head_bar {
+        height: 66px;
+      }
+
+    /* Ensure mobile menu aligns properly */
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Mobile menu styling */
+    .mobile-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #f6f7f6;
+        width: 200px; /* Fixed width for iPad */
+        border: 1px solid #ddd;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .mobile-links a {
+        display: block;
+        padding: 10px 15px;
+        text-align: right; /* Align links to the right */
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .desktop-nav {
+        display: flex !important; /* Force show desktop nav */
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+    .mobile-nav {
+        display: none;
     }
 }
