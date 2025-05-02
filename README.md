@@ -47,8 +47,19 @@ TO DO:
 
 - Style bullet list and timer ✅
 
-- Verify and add a single font for the whole site
+- Verify and add a single font for the whole site ✅
 
 - Add the ability to filter by videos, courses and text books 🟡
 
 - Must add support to search as the user is typing on the search bar ⚠
+
+
+
+
+Problems:
+
+- Only on laptop (width exactly: 1024px) the card buttons seems out of alginment (might be the character number)
+
+- Ipad Mini specific alignment for checkbox was breaking the other adjustments for ipad max and other tablets devices
+
+
